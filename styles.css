@@ -10,7 +10,7 @@ body {
     min-height: 100%;
     width: 100%;
     font-family: 'Kumbh Sans', sans-serif;
-    color: hsl(237, 12%, 33%);
+    color: hsl(238, 29%, 16%);
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background:hsl(273, 75%, 66%)
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%))
     
 }
 
@@ -65,16 +65,24 @@ body {
 .faq__container h1 {
     font-size: 2rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .question__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     border-bottom: 1px solid hsl(240, 5%, 91%);
+    
 }
 
 .question__box {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    font-size: 0.9rem;
+    color: hsl(240, 6%, 50%);
+    
 }
 
 .icon {
@@ -83,4 +91,6 @@ body {
 
 .answer__box {
     padding: 0rem 2rem 1rem 1rem;
+    font-size: 0.8rem;
+    color: hsl(240, 6%, 50%)
 }
