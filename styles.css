@@ -4,6 +4,7 @@
 
 body {
     height: 100%;
+    min-height: 100%;
     width: 100%;
 }
 
@@ -19,6 +20,7 @@ body {
 
 .logo__container {
     display: flex;
+    flex-direction: column;
     position: absolute;
     top: 3rem;
     bottom: 0px;
@@ -26,6 +28,22 @@ body {
     max-height: 12rem;
     width: auto;
     height: auto;
+}
+
+.image__box {
+    display: flex;
+    justify-content: center;
+}
+
+.image1 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.image2 {
+    position: absolute;
+    top: 7rem;
 }
 
 .faq__container {
