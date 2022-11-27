@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 *{
     box-sizing: border-box;
+    
 }
 
 body {
     height: 100%;
     min-height: 100%;
     width: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(237, 12%, 33%);
 }
 
 .container {
@@ -54,9 +59,28 @@ body {
     margin: 10rem 1rem 5rem 1rem;
     border-radius: 1.5rem;
     background: #f5f5f5;
-    padding: 5rem 1rem;
+    padding: 9rem 1rem;
 }
 
 .faq__container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
 
+.question__container {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.question__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.icon {
+    
+}
+
+.answer__box {
+    padding: 0rem 2rem 1rem 1rem;
 }
