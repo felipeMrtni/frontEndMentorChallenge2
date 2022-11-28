@@ -34,7 +34,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 10rem 1rem 5rem 1rem;
     border-radius: 1.5rem;
     background: #f5f5f5;
     padding: 9rem 1rem;
@@ -68,6 +67,10 @@ body {
     position: relative;
     top: 7rem;
     left: 0rem;
+}
+
+.faq__box {
+
 }
 
 .faq__header {
@@ -124,16 +127,21 @@ body {
         min-height: 900px;
     }
 
+    .faq__container {
+        justify-content: center;
+        align-items: flex-end;
+        max-height: 35rem;
+        max-width: 60rem;
+        width: 100%;
+        padding: 6rem;
+    }
+
     .logo__container {
         top:18rem;
         left: 9rem;
         width: 33rem;
         height: 0rem;
         max-width: 33rem;
-    }
-
-    .image__box {
-
     }
 
     .image1 {
@@ -149,20 +157,33 @@ body {
         left: -15rem;
     }
 
-    .faq__container {
-        justify-content: center;
-        align-items: flex-end;
-        max-height: 35rem;
-        max-width: 60rem;
-        width: 100%;
-        padding: 6rem;
+    .faq__box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
-    .faq__container h1 {
-        
+    .faq__header {
+
+    }
+
+    .faq__header h1 {
+
+    }
+
+    .faq__body {
+
     }
 
     .question__container {
         width: 24rem;
+    }
+
+    .question__box {
+        padding: 1rem 2.5rem 1rem 0;
+    }
+
+    .answer__box {
+        padding: 0 2rem 0 0;
     }
 }
