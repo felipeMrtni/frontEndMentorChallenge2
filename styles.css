@@ -116,7 +116,11 @@ body {
     }
 
     .logo__container {
-
+        top:18rem;
+        left: 9rem;
+        width: 33rem;
+        height: 0rem;
+        max-width: 33rem;
     }
 
     .image__box {
@@ -124,6 +128,16 @@ body {
     }
 
     .faq__container {
+        height: 35rem;
+        max-width: 60rem;
+        width: 100%;
+    }
+
+    .faq__container h1 {
+        
+    }
+
+    .question__container {
 
     }
 }
