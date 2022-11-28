@@ -69,10 +69,18 @@ body {
     max-width: 30rem;
 }
 
+.faq__header {
+
+}
+
 .faq__container h1 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
+}
+
+.faq__body {
+    
 }
 
 .question__container {
@@ -128,9 +136,12 @@ body {
     }
 
     .faq__container {
+        justify-content: center;
+        align-items: flex-end;
         height: 35rem;
         max-width: 60rem;
         width: 100%;
+        padding: 6rem;
     }
 
     .faq__container h1 {
@@ -138,6 +149,6 @@ body {
     }
 
     .question__container {
-
+        width: 24rem;
     }
 }
