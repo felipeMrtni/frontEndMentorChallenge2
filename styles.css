@@ -24,6 +24,7 @@ body {
     height: 100%;
     min-height: 100vh;
     width: 100%;
+    padding: 10rem 0;
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%))
     
 }
@@ -116,45 +117,39 @@ body {
 
 /* width > 1024 -------------------------- */ 
 @media (min-width: 1024px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-    }
-
     .container {
-        max-width: 1440px;
-        height: 900px;
-        min-height: 900px;
+        
     }
 
     .faq__container {
         justify-content: center;
         align-items: flex-end;
         max-height: 35rem;
-        max-width: 60rem;
-        width: 100%;
-        padding: 6rem;
+        max-width: 50rem;
+        width: 50rem;
     }
 
     .logo__container {
-        top:18rem;
-        left: 9rem;
-        width: 33rem;
-        height: 0rem;
+        top:10rem;
+        left: 0rem;
+        width: 25rem;
         max-width: 33rem;
+        max-height: 16rem;
     }
 
     .image1 {
         position: relative;
-        top: -12rem;
-        left: -18rem;
+        top: -3rem;
+        left: -6rem;
+        width: 24rem;
     }
     
 
     .image2 {
         position: absolute;
-        top: -4rem;
-        left: -15rem;
+        top: 3.8rem;
+        left: -4rem;
+        width: 9rem;
     }
 
     .faq__box {
@@ -186,4 +181,82 @@ body {
     .answer__box {
         padding: 0 2rem 0 0;
     }
+
 }
+
+/* width > 1270 -------------------------- */
+@media (min-width: 1270px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .container {
+        max-width: 1440px;
+        height: 900px;
+        min-height: 900px;
+    }
+
+    .faq__container {
+        justify-content: center;
+        align-items: flex-end;
+        max-height: 35rem;
+        max-width: 60rem;
+        width: 100%;
+        padding: 6rem;
+    }
+
+    .logo__container {
+        top:18rem;
+        left: 0rem;
+        width: 33rem;
+        height: 16rem;
+        max-width: 33rem;
+    }
+
+    .image1 {
+        position: relative;
+        top: -13rem;
+        left: -9rem;
+        width: 30rem;
+    }
+    
+
+    .image2 {
+        position: absolute;
+        top: -4.4rem;
+        left: -6rem;
+        width: 11.5rem;
+    }
+
+    .faq__box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .faq__header {
+
+    }
+
+    .faq__header h1 {
+
+    }
+
+    .faq__body {
+
+    }
+
+    .question__container {
+
+    }
+
+    .question__box {
+
+    }
+
+    .answer__box {
+
+    }
+}
+
