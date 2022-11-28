@@ -15,13 +15,21 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo__container">
-            <div class="image__box">
-                <img class="image1" src="./images/illustration-woman-online-mobile.svg">
-                <img class="image2" src="./images/bg-pattern-mobile.svg">
-            </div>
-        </div>
         <div class="faq__container">
+            <!-- -------------IMAGE------------------ -->
+            <div class="logo__container">
+                <div class="image__box">
+                    <picture>
+                        <source class="image1" media="(min-width: 1024px)" srcset="./images/illustration-woman-online-desktop.svg">
+                        <img class="image1" src="./images/illustration-woman-online-mobile.svg">
+                    </picture>
+                    <picture>
+                        <source class="image2" media="(min-width: 1024px)" srcset="./images/illustration-box-desktop.svg">
+                        <img class="image2" src="./images/bg-pattern-mobile.svg">
+                    </picture>
+                </div>
+            </div>
+            <!-- --------------FAQ------------------- -->
             <div class="faq__header">
                 <h1>FAQ</h1>
             </div>
