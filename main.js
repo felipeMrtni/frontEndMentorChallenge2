@@ -3,6 +3,7 @@ const questionButton = document.querySelectorAll(".question__container");
 questionButton.forEach((item) => {
     const question__box__item = item.querySelector(".question__box");
 
+    // ----------------- click event ---------------------
     question__box__item.addEventListener("click", () => {
         const answer__box__item = item.querySelector(".answer__box"); 
         const answer__box__active = document.querySelector(".active")
