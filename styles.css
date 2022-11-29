@@ -54,6 +54,7 @@ body {
     max-height: 12rem;
     width: auto;
     height: auto;
+    z-index: 99;
 }
 
 .image__box {
@@ -73,28 +74,45 @@ body {
     left: 0rem;
 }
 
-.flipCard {
-    position: absolute;
+.flipCard { 
     display: flex;
     height: 100%;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 0 2rem; */
+    /* ---flip paremeters--- */
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
 }
 
+/* .flipCard:hover {
+    transform: rotateY(180deg);
+} */
+
 .faq__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    min-height: 100%;
+    max-height: 50rem;
+    padding: 8rem 1rem;
+    /* ---flip paremeters--- */
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.signUp__box {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100%;
     max-height: 50rem;
     padding: 8rem 1rem;
-}
-
-.signUp__box {
-
+    background: yellow;
+    transform: rotateY(180deg);
 }
 
 .faq__header {
@@ -115,9 +133,9 @@ body {
     transition: all 0.5s ease;
 }
 
-/* .question__container:hover {
+.question__container:hover {
     background: #d1d0d0;
-} */
+}
 
 .question__box {
     display: flex;
@@ -281,8 +299,8 @@ body {
     .faq__box {
         align-items: flex-start;
         max-height: 50%;
-        min-height: 75%;
-        padding: 0 8rem 0 0;
+        min-height: 100%;
+        padding: 5rem 8rem 0 0;
     }
 
     .signUp__box {
