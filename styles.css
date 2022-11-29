@@ -105,20 +105,13 @@ body {
     cursor: pointer;
     padding: 1rem 0;
     font-size: 0.9rem;
+    font-weight: 400;
     color: hsl(240, 6%, 50%);
     
 }
 
-.questionActive {
-    font-weight: 700;
-}
-
 .icon {
-    
-}
-
-.iconActive {
-    rotate: 180deg;
+    rotate: 0deg;
 }
 
 .answer__box {
