@@ -109,6 +109,10 @@ body {
     
 }
 
+.questionActive {
+    font-weight: 700;
+}
+
 .icon {
     
 }
