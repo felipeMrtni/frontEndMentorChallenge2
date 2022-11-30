@@ -53,9 +53,14 @@ function defaultConfig (item){
 
 //  ------------------  SIGN UP CARD  ------------------------
 
-let form = document.forms['sign_up_form']
+let form = document.forms['sign_up_form'];
 
+form.onsubmit = function(event) {
+    event.preventDefault();
 
+    clearError();
+    checkForm();
+}
 
 function checkForm() {
     let firstnameRef = form.firstname.value;
@@ -64,32 +69,32 @@ function checkForm() {
     let passwordRef = form.password.value;
     
     if (firstnameRef === "") {
-        showError("firstname__error", "First Name cannot be empty")
+        showError("firstname__error", "First Name cannot be empty");
         showIconError("firstname__icon");
-        borderColorError("firstname__input")
-        const errorMessage = "Must have more than 3 letter and no numbers!";
+        showBorderError("firstname__input");
+        // "Must have more than 3 letter and no numbers!"
     } 
-    // else if (checkFormRules(firstnameRef, errorMessage, "firstname__error", "firstname__icon", "firstname__input"));
+    else if (checkFormRules(firstnameRef, "firstname__error", "firstname__icon", "firstname__input"));
     
     if (lastnameRef === "") {
-        showError("lastname__error", "Last Name cannot be empty")
+        showError("lastname__error", "Last Name cannot be empty");
         showIconError("lastname__icon");
-        borderColorError("lastname__input")
-        const errorMessage = "Must have more than 3 letter and no numbers!"
+        showBorderError("lastname__input");
+        // "Must have more than 3 letter and no numbers!", 
     } 
-    // else if (checkFormRules(lastnameRef, "lastname__error", "lastname__icon", "lastname__input",errorMessage));
+    else if (checkFormRules(lastnameRef, "lastname__error", "lastname__icon", "lastname__input"));
     
     if (emailRef === "") {
-        showError("email__error", "Email cannot be empty")
+        showError("email__error", "Email cannot be empty");
         showIconError("email__icon");
-        borderColorError("email__input")
+        showBorderError("email__input");
     } 
     // else if (checkFormRules(emailRef, "email__error", "email__icon", "email__input"));
     
     if (passwordRef === "") {
-        showError("password__error", "Password cannot be empty")
+        showError("password__error", "Password cannot be empty");
         showIconError("password__icon");
-        borderColorError("password__input")
+        showBorderError("password__input");
     } 
     // else if (checkFormRules(passwordRef, "password__error", "password__icon", "password__input"));
 }
@@ -98,7 +103,7 @@ function showError(errorElement, errorMessage) {
     // find the element's class 
     let warnings = document.querySelector("."+errorElement);
     //adds the class display__error to the element's class
-    warnings.classList.add("display__error")
+    warnings.classList.add("display__error");
     //adds the msg errorMessage in the html value
     warnings.innerHTML = errorMessage;
 }
@@ -108,25 +113,32 @@ function showIconError(iconElement) {
     icons.classList.add("display__icon");
 }
 
-function borderColorError (inputElement) {
+function showBorderError (inputElement) {
     let errorBorders = document.querySelector("."+inputElement);
-    errorBorders.classList.add("display__border")
+    errorBorders.classList.add("display__border");
+}
+
+function checkFormRules (elementRef, errorElement, iconRef, inputRef) {
+    // let lettersRule = /^[A-Za-z]$/;
+    // let numbersRule = /^{3,30}$/;
+    let namesRule = /^[A-Za-z]{3,30}$/;
+    
+    if(namesRule.test(elementRef) === false){
+        const ruleMessage = "Must have more than 3 letter and no numbers!"
+        let rules = document.querySelector("."+errorElement);
+        rules.classList.add("display__error");
+        rules.innerHTML = ruleMessage;
+        showIconError(iconRef);
+        showBorderError(inputRef);
+    }
 }
 
 function clearError() {
     let errors = document.querySelectorAll(".error");
     let icons = document.querySelectorAll(".icon");
     let borders = document.querySelectorAll(".inputarea");
-    errors.forEach((item) => item.classList.remove("display__error"))
-    icons.forEach((item) => item.classList.remove("display__icon"))
-    borders.forEach((item) => item.classList.remove("display__border"))
+    errors.forEach((item) => item.classList.remove("display__error"));
+    icons.forEach((item) => item.classList.remove("display__icon"));
+    borders.forEach((item) => item.classList.remove("display__border"));
 }
 
-
-
-form.onsubmit = function(event) {
-    event.preventDefault();
-
-    clearError();
-    checkForm();
-}
