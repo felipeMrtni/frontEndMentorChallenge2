@@ -1,3 +1,6 @@
+
+//  ------------------  FAQ CARD  ------------------------
+
 const questionButton = document.querySelectorAll(".question__container");
 
 questionButton.forEach((item) => {
@@ -23,7 +26,6 @@ function checkActive(item, answer, answer__active) {
         answer__active.style.height = 0;
         // icon_item.classList.remove("iconActive");
         // question_item.classList.remove("questionActive");
-        
     }
 
     if (answer !== answer__active) {
@@ -49,6 +51,82 @@ function defaultConfig (item){
     answers.forEach((item) => (item.style.height = 0));
 }
 
+//  ------------------  SIGN UP CARD  ------------------------
+
+let form = document.forms['sign_up_form']
 
 
 
+function checkForm() {
+    let firstnameRef = form.firstname.value;
+    let lastnameRef = form.lastname.value;
+    let emailRef = form.email.value;
+    let passwordRef = form.password.value;
+    
+    if (firstnameRef === "") {
+        showError("firstname__error", "First Name cannot be empty")
+        showIconError("firstname__icon");
+        borderColorError("firstname__input")
+        const errorMessage = "Must have more than 3 letter and no numbers!";
+    } 
+    // else if (checkFormRules(firstnameRef, errorMessage, "firstname__error", "firstname__icon", "firstname__input"));
+    
+    if (lastnameRef === "") {
+        showError("lastname__error", "Last Name cannot be empty")
+        showIconError("lastname__icon");
+        borderColorError("lastname__input")
+        const errorMessage = "Must have more than 3 letter and no numbers!"
+    } 
+    // else if (checkFormRules(lastnameRef, "lastname__error", "lastname__icon", "lastname__input",errorMessage));
+    
+    if (emailRef === "") {
+        showError("email__error", "Email cannot be empty")
+        showIconError("email__icon");
+        borderColorError("email__input")
+    } 
+    // else if (checkFormRules(emailRef, "email__error", "email__icon", "email__input"));
+    
+    if (passwordRef === "") {
+        showError("password__error", "Password cannot be empty")
+        showIconError("password__icon");
+        borderColorError("password__input")
+    } 
+    // else if (checkFormRules(passwordRef, "password__error", "password__icon", "password__input"));
+}
+
+function showError(errorElement, errorMessage) {
+    // find the element's class 
+    let warnings = document.querySelector("."+errorElement);
+    //adds the class display__error to the element's class
+    warnings.classList.add("display__error")
+    //adds the msg errorMessage in the html value
+    warnings.innerHTML = errorMessage;
+}
+
+function showIconError(iconElement) {
+    let icons = document.querySelector("."+iconElement);
+    icons.classList.add("display__icon");
+}
+
+function borderColorError (inputElement) {
+    let errorBorders = document.querySelector("."+inputElement);
+    errorBorders.classList.add("display__border")
+}
+
+function clearError() {
+    let errors = document.querySelectorAll(".error");
+    let icons = document.querySelectorAll(".icon");
+    let borders = document.querySelectorAll(".inputarea");
+    errors.forEach((item) => item.classList.remove("display__error"))
+    icons.forEach((item) => item.classList.remove("display__icon"))
+    borders.forEach((item) => item.classList.remove("display__border"))
+}
+
+
+
+form.onsubmit = function(event) {
+    event.preventDefault();
+
+    clearError();
+    checkForm();
+}
