@@ -40,8 +40,9 @@ body {
     /* padding: 9rem 1rem 3rem 1rem; */
     /* max-width: 30rem; */
     min-width: 21rem;
+    height: 40rem;
     max-height: 50rem;
-    min-height: 33rem;
+    /* min-height: 33rem; testando height para sign up */
 }
 
 .logo__container {
@@ -91,6 +92,8 @@ body {
     transform: rotateY(180deg);
 } */
 
+/* -------------- FAQ card config -----------------------*/
+
 .faq__box {
     /* display: flex; VOLTAR DEPOIS QUE CONFIGURAR PAGINA DE SIGN UP */
     display: none;
@@ -106,23 +109,6 @@ body {
     background: #f5f5f5;
     position: absolute;
     backface-visibility: hidden;
-}
-
-.signUp__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 1.5rem;
-    width: 100%;
-    min-height: 100%;
-    max-height: 50rem;
-    padding: 8rem 1rem;
-    /* ---flip paremeters--- */
-    backface-visibility: hidden;
-    overflow: hidden;
-    position: absolute;
-    background: #b9b3b3;
-    /* transform: rotateY(180deg); */
 }
 
 .faq__header {
@@ -175,12 +161,123 @@ body {
     
 }
 
+/*--------------- Sign Up card config --------------------*/
+
+.signUp__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+    height: 100%;
+    width: 100%;
+    /* min-height: 100%;
+    max-height: 50rem; */
+    padding: 8rem 1rem;
+    /* ---flip paremeters--- */
+    backface-visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    background: #b9b3b3;
+    /* transform: rotateY(180deg); */
+}
+
+.form__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__header h2 {
+    margin: 0 0 2rem 0;
+    border: 2px solid purple;
+    padding: 1rem 3rem;
+    background: #f5f5f5;
+}
+
+.form__header span {
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input__box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.inputarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: solid 1px hsla(255, 2%, 64%, 0.253);
+    margin: 0.5rem auto;
+    position: relative;
+}
+
+.inputarea:focus {
+    outline: none;
+    border: solid 1px hsl(246, 23%, 48%);
+}
+
+.icon {
+    display: none;
+    position: absolute;
+}
+
+.icon.display__icon {
+    position: absolute;
+    display: block;
+    top: 33%;
+    right: 3%;
+}
+
+.error {
+    display: none;
+    align-self: flex-end;
+    text-align: end;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: hsl(0deg 100% 52% / 55%);
+}
+
+.error.display__error{
+    display: block;
+}
+
+.submit__button {
+    background: hsl(154, 59%, 51%);
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f5f5f5;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.submit__button:hover {
+    background: hsl(154, 59%, 66%);
+}
+
+.submit__button:active {
+    background: hsl(154, 59%, 46%);
+}
+
+
 /* width > 1024 -------------------------- */ 
 @media (min-width: 1024px) {
-    .container {
-        
-    }
-
     .content__container {
         /* justify-content: center; */
         align-items: flex-end;
@@ -218,28 +315,18 @@ body {
         width: 50%;
     }
 
+    /* -------------- FAQ card config -----------------------*/
+
     .faq__box {
         padding: 0 4rem 0 0;
         min-height: 100%;
         max-height: 50%;
     }
 
-    .signUp__box {
-
-    }
-
     .faq__header {
         /* padding: 0 10rem 0 10rem; */
         margin-bottom: 2rem;
         margin-top: 5rem;
-    }
-
-    .faq__header h1 {
-
-    }
-
-    .faq__body {
-        
     }
 
     .question__container {
@@ -252,6 +339,47 @@ body {
 
     .answer__box {
         margin-right: 1rem;
+    }
+
+    /*--------------- Sign Up card config --------------------*/
+    .signUp__box {
+
+    }
+
+    .form__header {
+
+    }
+    
+    .form__header h2 {
+    
+    }
+    
+    .form__header span {
+    
+    }
+    
+    .form {
+    
+    }
+    
+    .input__box {
+    
+    }
+    
+    .inputarea {
+    
+    }
+    
+    .icon {
+    
+    }
+    
+    .error {
+    
+    }
+    
+    .sumbit__button {
+    
     }
 
 }
@@ -294,7 +422,6 @@ body {
         width: 30rem;
     }
     
-
     .image2 {
         position: absolute;
         top: -4.4rem;
@@ -306,6 +433,8 @@ body {
         width: 50%;
     }
 
+    /* -------------- FAQ card config -----------------------*/
+
     .faq__box {
         align-items: flex-start;
         max-height: 50%;
@@ -313,32 +442,54 @@ body {
         padding: 5rem 8rem 0 0;
     }
 
-    .signUp__box {
-
-    }
-
     .faq__header {
         margin: 0 0 3rem 0;
-    }
-
-    .faq__header h1 {
-
-    }
-
-    .faq__body {
-        /* margin-right: 4rem; */
-    }
-
-    .question__container {
-
-    }
-
-    .question__box {
-
     }
 
     .answer__box {
         margin-right: 1rem;
     }
+
+    /*--------------- Sign Up card config --------------------*/
+    .signUp__box {
+
+    }
+
+    .form__header {
+
+    }
+    
+    .form__header h2 {
+    
+    }
+    
+    .form__header span {
+    
+    }
+    
+    .form {
+    
+    }
+    
+    .input__box {
+    
+    }
+    
+    .inputarea {
+    
+    }
+    
+    .icon {
+    
+    }
+    
+    .error {
+    
+    }
+    
+    .sumbit__button {
+    
+    }
+
 }
 
