@@ -17,6 +17,8 @@ body {
     color: hsl(238, 29%, 16%);
 }
 
+
+
 .container {
     display: flex;
     justify-content: center;
@@ -30,6 +32,10 @@ body {
 }
 
 .content__container {
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 30rem;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -46,33 +52,37 @@ body {
 }
 
 .logo__container {
-    display: flex;
-    flex-direction: column;
+}
+
+.image__bg {
     position: absolute;
-    top: -7rem;
-    bottom: 0px;
-    max-width: 16rem;
-    max-height: 12rem;
-    width: auto;
-    height: auto;
-    z-index: 99;
+    top: 0rem;
+    left: 3rem;
+    z-index: 2;
+}
+
+.image__mobile {
+    position: absolute;
+    width: 16rem;
+    height: 100%;
+    max-height: 100%;
+    z-index: 10;
+    top: -21rem;
+    left: 2.5rem;
 }
 
 .image__box {
-    display: flex;
-    justify-content: center;
+    display: none;
 }
 
-.image1 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.image2 {
+.image__shadow {
     position: relative;
     top: 7rem;
     left: 0rem;
+}
+
+.image-box {
+    display: none;
 }
 
 .flipCard { 
@@ -90,15 +100,17 @@ body {
 
 /* .flipCard:hover {
     transform: rotateY(180deg);
-} */
+}  */
 
 /* -------------- FAQ card config -----------------------*/
 
 .faq__box {
-    /* display: flex; VOLTAR DEPOIS QUE CONFIGURAR PAGINA DE SIGN UP */
+    display: flex; 
+    /* VOLTAR DEPOIS QUE CONFIGURAR PAGINA DE SIGN UP */
     display: none;
     flex-direction: column;
     align-items: center;
+    border-radius: 1.5rem;
     height: 100%;
     width: 100%;
     min-height: 100%;
@@ -177,7 +189,7 @@ body {
     backface-visibility: hidden;
     overflow: hidden;
     position: absolute;
-    background: #b9b3b3;
+    background: #f5f5f5;
     /* transform: rotateY(180deg); */
 }
 
@@ -204,13 +216,13 @@ body {
     align-items: center;
 }
 
-.input__box {
+/* .input__box {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     position: relative;
-}
+} */
 
 .inputarea {
     width: 100%;
@@ -278,9 +290,14 @@ body {
 
 /* width > 1024 -------------------------- */ 
 @media (min-width: 1024px) {
+
     .content__container {
         /* justify-content: center; */
         align-items: flex-end;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: -7rem 5rem;
+        background-size: 30rem;
         max-height: 50rem;
         min-height: 33rem;
         max-width: 50rem;
@@ -290,25 +307,38 @@ body {
     }
 
     .logo__container {
-        top:8.5rem;
-        left: 0rem;
-        width: 25rem;
-        max-width: 33rem;
+        width: 50rem;
     }
 
-    .image1 {
-        position: relative;
-        top: -3rem;
-        left: -6rem;
-        width: 24rem;
+    .image__desktop {
+        background-image: url(./images/illustration-woman-online-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: -7rem 7rem;
+        background-size: 30rem;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
     }
     
+    .image__mobile {
+        display: none;
+    }
 
-    .image2 {
+    .image__bg {
+        display: none;
+    }
+
+    .image__box {
+        /* background-image: url(./images/illustration-box-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: -7rem 7rem;
+        background-size: 15rem; */
+        display: block;
         position: absolute;
-        top: 3.8rem;
-        left: -4rem;
-        width: 9rem;
+        top: 16rem;
+        left: -6.5rem;
+        width: 13rem;
     }
 
     .flipCard {
@@ -408,25 +438,19 @@ body {
     }
 
     .logo__container {
-        top:18rem;
-        left: 0rem;
-        width: 33rem;
-        height: 16rem;
-        max-width: 33rem;
+
     }
 
-    .image1 {
-        position: relative;
-        top: -13rem;
-        left: -9rem;
-        width: 30rem;
+    .image-mobile {
+        display: none;
     }
-    
-    .image2 {
-        position: absolute;
-        top: -4.4rem;
-        left: -6rem;
-        width: 11.5rem;
+
+    .image__desktop {
+        left: 0;
+    }
+
+    .image__box {
+        
     }
 
     .flipCard {
