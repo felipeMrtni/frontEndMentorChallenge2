@@ -146,18 +146,15 @@ function clearError() {
 
 function flipCard(name) {
     let cardRef = document.querySelector(".card");
-    // let frontCard = document.querySelector("#"+i);
-    let backCard = document.querySelector("signup__box");
-    console.log("clicou botao")
-
+    let whiteBoxRef = document.querySelector(".content__container")
 
     if (name == "faq__button"){
         cardRef.style.transform = "none";
-        console.log("clicou no FAQ");
+        whiteBoxRef.style.height = "36rem";
 
     };
     if (name == "signup__button"){
-        console.log("clicou no SIGN UP")
         cardRef.style.transform = "rotateY(180deg)";
+        whiteBoxRef.style.height = "45rem";
     }
 }
