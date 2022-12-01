@@ -16,7 +16,7 @@ questionButton.forEach((item) => {
 });
 
 function checkActive(item, answer, answer__active) {
-    const icon_item = item.querySelector(".icon");
+    const icon_item = item.querySelector(".icon__faq");
     const question_item = item.querySelector(".question__box");
 
     defaultConfig(item);
@@ -40,7 +40,7 @@ function checkActive(item, answer, answer__active) {
 }
 
 function defaultConfig (item){
-    const icons = document.querySelectorAll(".icon");
+    const icons = document.querySelectorAll(".icon__faq");
     const questions = document.querySelectorAll(".question__box");
     const answers = document.querySelectorAll(".answer__box")
     // icons.forEach((item) => (item.classList.remove("iconActive")))
@@ -152,14 +152,12 @@ function flipCard(name) {
 
 
     if (name == "faq__button"){
-        cardRef.style.transform = "rotateY(180deg)";
+        cardRef.style.transform = "none";
         console.log("clicou no FAQ");
-        // frontCard.style.transform = "rotateY(180deg)";
+
     };
     if (name == "signup__button"){
         console.log("clicou no SIGN UP")
-        cardRef.style.transform = "none";
-        // frontCard.style.transform = "rotateY(180deg)";
-        // backCard.style.transform = "rotateY(180deg)";
+        cardRef.style.transform = "rotateY(180deg)";
     }
 }
