@@ -142,3 +142,24 @@ function clearError() {
     borders.forEach((item) => item.classList.remove("display__border"));
 }
 
+// ----------------------- BUTTONS ------------------------------
+
+function flipCard(name) {
+    let cardRef = document.querySelector(".card");
+    // let frontCard = document.querySelector("#"+i);
+    let backCard = document.querySelector("signup__box");
+    console.log("clicou botao")
+
+
+    if (name == "faq__button"){
+        cardRef.style.transform = "rotateY(180deg)";
+        console.log("clicou no FAQ");
+        // frontCard.style.transform = "rotateY(180deg)";
+    };
+    if (name == "signup__button"){
+        console.log("clicou no SIGN UP")
+        cardRef.style.transform = "none";
+        // frontCard.style.transform = "rotateY(180deg)";
+        // backCard.style.transform = "rotateY(180deg)";
+    }
+}
