@@ -163,9 +163,13 @@ const body = document.querySelector('body');
 const container = document.querySelector('.container');
 const content = document.querySelector('.content__container');
 const toggle = document.querySelector('#toggle');
+const faq = document.querySelector('.faq__box')
+const signup = document.querySelector('.signup__box')
 toggle.onclick = function(){
     toggle.classList.toggle('active');
     container.classList.toggle('active');
     content.classList.toggle('active');
     body.classList.toggle('active');
+    faq.classList.toggle('active');
+    signup.classList.toggle('active');
     }
