@@ -64,10 +64,9 @@ body {
 .image__mobile {
     position: absolute;
     width: 16rem;
-    height: 100%;
-    max-height: 100%;
+    height: 13rem;
     z-index: 10;
-    top: -21rem;
+    top: -8rem;
     left: 2.5rem;
 }
 
@@ -216,13 +215,13 @@ body {
     align-items: center;
 }
 
-/* .input__box {
+.input__box {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     position: relative;
-} */
+}
 
 .inputarea {
     width: 100%;
@@ -287,6 +286,24 @@ body {
     background: hsl(154, 59%, 46%);
 }
 
+/* Buttons ------------------------------- */
+.button__box {
+    background: blue;
+    /* position: absolute; */
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+    background: blue;
+    margin: 1rem;
+}
+
+.page__button {
+    background: black;
+    /* z-index: 99; */
+}
+
 
 /* width > 1024 -------------------------- */ 
 @media (min-width: 1024px) {
@@ -330,10 +347,6 @@ body {
     }
 
     .image__box {
-        /* background-image: url(./images/illustration-box-desktop.svg);
-        background-repeat: no-repeat;
-        background-position: -7rem 7rem;
-        background-size: 15rem; */
         display: block;
         position: absolute;
         top: 16rem;
@@ -373,7 +386,7 @@ body {
 
     /*--------------- Sign Up card config --------------------*/
     .signUp__box {
-
+        padding: 2rem 2rem;
     }
 
     .form__header {
