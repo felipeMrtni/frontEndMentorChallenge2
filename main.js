@@ -151,10 +151,21 @@ function flipCard(name) {
     if (name == "faq__button"){
         cardRef.style.transform = "none";
         whiteBoxRef.style.height = "36rem";
-
+        clearError();
     };
     if (name == "signup__button"){
         cardRef.style.transform = "rotateY(180deg)";
         whiteBoxRef.style.height = "45rem";
     }
 }
+
+const body = document.querySelector('body');
+const container = document.querySelector('.container');
+const content = document.querySelector('.content__container');
+const toggle = document.querySelector('#toggle');
+toggle.onclick = function(){
+    toggle.classList.toggle('active');
+    container.classList.toggle('active');
+    content.classList.toggle('active');
+    body.classList.toggle('active');
+    }
