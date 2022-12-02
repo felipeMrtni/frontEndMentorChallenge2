@@ -140,6 +140,8 @@ body.active__theme {
     flex-direction: column;
     border-bottom: 1px solid hsl(240, 5%, 91%);
     transition: all 0.5s ease;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
 }
 
 .question__container:hover {
@@ -459,11 +461,6 @@ footer {
         width: 100vw;
     }
 
-    .container {
-        /* max-width: 1440px;
-        height: 900px;
-        min-height: 900px; */
-    }
     /* ----------------------------------------- */
     .content__container {
         align-items: flex-end;
