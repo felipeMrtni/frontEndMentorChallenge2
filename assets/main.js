@@ -9,7 +9,7 @@ questionButton.forEach((item) => {
     // ----------------- click event ---------------------
     question__box__item.addEventListener("click", () => {
         const answer__box__item = item.querySelector(".answer__box"); 
-        const answer__box__active = document.querySelector(".active")
+        const answer__box__active = document.querySelector(".active");
 
         checkActive(item, answer__box__item, answer__box__active)
     });
@@ -144,20 +144,28 @@ function clearError() {
 
 // ----------------------- BUTTONS ------------------------------
 
-function flipCard(name) {
+function flipCard(id) {
     let cardRef = document.querySelector(".card");
-    let whiteBoxRef = document.querySelector(".content__container")
+    let pageRef = document.querySelector("#"+id);
+    let faqRef = document.querySelector("#faq__button");
+    let signupRef = document.querySelector("#signup__button");
+    let buttonRef = document.querySelectorAll(".page__button");
 
-    if (name == "faq__button"){
+    buttonRef.forEach((item) => item.classList.remove("active__page"));
+
+    if (id == "faq__button"){
         cardRef.style.transform = "none";
+        pageRef.classList.add("active__page")
         // whiteBoxRef.style.height = "36rem";
         clearError();
     };
-    if (name == "signup__button"){
+    if (id == "signup__button"){
         cardRef.style.transform = "rotateY(180deg)";
+        pageRef.classList.add("active__page");
         // whiteBoxRef.style.height = "45rem";
     }
 }
+
 
 const body = document.querySelector('body');
 const container = document.querySelector('.container');
@@ -166,10 +174,10 @@ const toggle = document.querySelector('#toggle');
 const faq = document.querySelector('.faq__box')
 const signup = document.querySelector('.signup__box')
 toggle.onclick = function(){
-    toggle.classList.toggle('active');
-    container.classList.toggle('active');
-    content.classList.toggle('active');
-    body.classList.toggle('active');
-    faq.classList.toggle('active');
-    signup.classList.toggle('active');
+    toggle.classList.toggle('active__theme');
+    container.classList.toggle('active__theme');
+    content.classList.toggle('active__theme');
+    body.classList.toggle('active__theme');
+    faq.classList.toggle('active__theme');
+    signup.classList.toggle('active__theme');
     }
