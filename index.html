@@ -8,6 +8,7 @@
     <title>Frontend Mentor | FAQ Accordion Card</title>
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .attribution { font-size: 11px; text-align: center; }
         .attribution a { color: hsl(228, 45%, 44%); }
@@ -147,7 +148,7 @@
                         </div>
                         <span class="error password__error"></span>
                         <!-- Submit button ---------------------------------------------- -->
-                        <input class="submit__button" type="submit" name="submit_btn" value="CLAIM YOUR FREE TRIAL">
+                        <input class="submit__button" type="submit" name="submit_btn" value="SIGN UP!">
                         <h3>By clicking the button, you are agreeing to our<span class="letraVermelha"> Terms and Services</span></h3>
                         </form>
                     </div>
@@ -155,12 +156,12 @@
                 <!--  -------LOG IN SECTION------------ -->
 
             </div>
-            <!-- ---------BUTTONS SECTION ---------- -->
+            <!-- ---------PAGE BUTTONS SECTION ---------- -->
             <div class="button__box">
                 <button onclick="flipCard(id)" class="page__button" id="signup__button">Sign Up!</button>
                 <button onclick="flipCard(id)" class="page__button" id="faq__button">FAQ</button>  
             </div>
-            <!-- ----------DARK/LIGHT MODE---------- -->
+            <!-- ----------DARK/LIGHT THEME---------- -->
             <div class="toggle__container">
                 <div id="toggle">
                     <i class="indicator"></i>
@@ -172,9 +173,15 @@
     <script src="./assets/main.js"></script>
 </body>
 <footer>
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
-      </div>
+    <div class="footer__content">
+        <h3></h3>
+        <ul class="socials">
+            <li><a href="https://www.linkedin.com/in/felipe-campana-martini/"><i class="fa fa-linkedin-square"></i></a></li>
+            <li><a href="https://github.com/felipeMrtni"><i class="fa fa-github"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer__bottom">
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Felipe Martini</a>.</p>
+    </div>
 </footer>
 </html>

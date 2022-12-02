@@ -47,8 +47,7 @@ body.active__theme {
     border-radius: 1.5rem;
     background: #f5f5f5;
     min-width: 21rem;
-    height: 45rem;
-    max-height: 50rem;
+    height: 35rem;
     width: 33rem;
 }
 
@@ -178,9 +177,8 @@ body.active__theme {
     flex-direction: column;
     align-items: center;
     border-radius: 1.5rem;
-    max-height: 45rem;
     max-width: 25rem;
-    padding: 6rem 1rem 1rem 1rem;
+    padding: 5rem 1rem 1rem 1rem;
     /* ---flip paremeters--- */
     backface-visibility: hidden;
     overflow: hidden;
@@ -282,13 +280,15 @@ body.active__theme {
 }
 
 .submit__button {
-    background: hsl(154, 59%, 51%);
+    background: #ff00cc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 100%;
     font-size: 1rem;
     font-weight: 600;
     color: #f5f5f5;
     padding: 1rem;
-    margin: 1rem;
+    margin: 0.5rem;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -296,11 +296,7 @@ body.active__theme {
 }
 
 .submit__button:hover {
-    background: hsl(154, 59%, 66%);
-}
-
-.submit__button:active {
-    background: hsl(154, 59%, 46%);
+    opacity: 0.6;
 }
 
 /* Buttons ------------------------------- */
@@ -310,8 +306,7 @@ body.active__theme {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-    bottom: 0;
-    margin: 1rem;
+    bottom: 1.5rem;
     position: absolute; 
 }
 
@@ -321,6 +316,7 @@ body.active__theme {
     height: 3rem;
     padding: 0rem;
     border-radius: 1rem;
+    transition: all 0.5s ease;
     background: #a8c0ff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -329,16 +325,6 @@ body.active__theme {
     box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
 }
 
-#faq__button .page__button {
-
-}
-
-#signup__button .page__button {
-
-}
-
-
-
 .active__page {
     background: #8e9eab;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
@@ -346,7 +332,7 @@ body.active__theme {
 }
 
 .page__button:hover {
-    background: gray;
+    opacity: 0.6;
 }
 
 /* DARK/LIGH MODE ------------------------ */
@@ -403,7 +389,67 @@ body.active__theme {
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
                 inset 0 4px 4px rgba(255, 255, 255, 0.2),
                 inset 0 -4px 4px rgba(255, 255, 255, 0.2);
-}   
+}
+
+/* FOOTER -------------------------------- */
+
+footer {
+    background: #222;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    /* padding-top: 1rem; */
+    color: #f5f5f5;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials li {
+    margin: 0.5rem;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color 0.5s ease;
+}
+
+.socials a:hover {
+    color: aqua;
+}
+
+.footer__bottom {
+    background: #000;
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.footer__bottom p {
+    font-size: 0.8rem;
+    word-spacing: 2px;
+}
+
+.footer__bottom a {
+    text-decoration: none;
+    color: aqua;
+}
 
 /* width > 1024 -------------------------- */ 
 @media (min-width: 1080px) {
@@ -475,7 +521,7 @@ body.active__theme {
         align-items: flex-start;
         max-height: 50%;
         min-height: 100%;
-        padding: 5rem 3rem 0 3rem;
+        padding: 5rem 5rem 0 0;
         max-width: 100%;
     }
 
@@ -498,7 +544,8 @@ body.active__theme {
 
     /*--------------- Sign Up card config --------------------*/
     .signup__box {
-        padding: 2rem 2rem;
+        /* padding: 2rem 2rem; */
+        padding: 5rem 5rem 0 0;
         max-width: 100%;
     }
     
@@ -506,41 +553,11 @@ body.active__theme {
         height: 34rem;
     }
     
-    .form__header {
-    
-    }
-    
-    .form__header span {
-    
-    }
-    
-    .form {
-    
-    }
-    
-    .input__box {
-    
-    }
-    
-    .inputarea {
-    
-    }
-    
-    .icon {
-    
-    }
-    
-    .error {
-    
-    }
-    
-    .sumbit__button {
-    
-    }
     /* ---------- BUTTON BOX --------------- */
     .button__box {
         width: 50%;
-        bottom: 1rem;
+        bottom: 2rem;
+        right: 2rem;
     }
 
     /* -------------DARK/LIGHT MODE ---------------*/

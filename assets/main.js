@@ -133,9 +133,7 @@ function clearError() {
     borders.forEach((item) => item.classList.remove("display__border"));
 }
 
-// ------- BUTTONS --------------------------------------------------
-
-        // ------------------ PAGE BUTTONS ---------------------------
+// ------------------ PAGE BUTTONS ---------------------------
 function flipCard(id) {
     let cardRef = document.querySelector(".card");
     let pageRef = document.querySelector("#"+id);
@@ -156,7 +154,7 @@ function flipCard(id) {
     }
 }
 
-        // ------------------ THEME BUTTONS --------------------------
+// ------------------ THEME BUTTONS --------------------------
 const toggle = document.querySelector('#toggle');
 
 toggle.onclick = function() {
