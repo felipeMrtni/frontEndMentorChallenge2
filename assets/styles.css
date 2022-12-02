@@ -180,7 +180,7 @@ body.active__theme {
     border-radius: 1.5rem;
     max-height: 45rem;
     max-width: 25rem;
-    padding: 7rem 1rem 1rem 1rem;
+    padding: 6rem 1rem 1rem 1rem;
     /* ---flip paremeters--- */
     backface-visibility: hidden;
     overflow: hidden;
@@ -194,7 +194,7 @@ body.active__theme {
     background: #e0dddd
 }
 
-.form__header {
+.form__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,7 +202,7 @@ body.active__theme {
     text-align: center;
 }
 
-.form__header h2 {
+.form__header {
     display: flex;
     margin: 0 0 1rem 0;
     border: 2px solid purple;
@@ -217,7 +217,13 @@ body.active__theme {
 }
 
 .form__header span {
-
+    background: #40E0D0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
 .form {
@@ -496,11 +502,11 @@ body.active__theme {
         max-width: 100%;
     }
     
-    .form__header {
+    .form__container {
         height: 34rem;
     }
     
-    .form__header h2 {
+    .form__header {
     
     }
     
