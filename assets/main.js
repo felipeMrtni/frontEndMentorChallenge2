@@ -1,5 +1,5 @@
 
-//  ------------------  FAQ CARD  ------------------------
+//  ------------------  FAQ CARD  ----------------------------------------------------
 
 const questionButton = document.querySelectorAll(".question__container");
 
@@ -51,7 +51,7 @@ function defaultConfig (item){
     answers.forEach((item) => (item.style.height = 0));
 }
 
-//  ------------------  SIGN UP CARD  ------------------------
+//  ------------------  SIGN UP CARD  -------------------------------------------------------
 
 let form = document.forms['sign_up_form'];
 
@@ -63,26 +63,17 @@ form.onsubmit = function(event) {
 }
 
 function checkForm() {
-    let firstnameRef = form.firstname.value;
-    let lastnameRef = form.lastname.value;
+    let fullnameRef = form.fullname.value;
     let emailRef = form.email.value;
     let passwordRef = form.password.value;
     
-    if (firstnameRef === "") {
-        showError("firstname__error", "First Name cannot be empty");
-        showIconError("firstname__icon");
-        showBorderError("firstname__input");
+    if (fullnameRef === "") {
+        showError("fullname__error", "First Name cannot be empty");
+        showIconError("fullname__icon");
+        showBorderError("fullname__input");
         // "Must have more than 3 letter and no numbers!"
     } 
-    else if (checkFormRules(firstnameRef, "firstname__error", "firstname__icon", "firstname__input"));
-    
-    if (lastnameRef === "") {
-        showError("lastname__error", "Last Name cannot be empty");
-        showIconError("lastname__icon");
-        showBorderError("lastname__input");
-        // "Must have more than 3 letter and no numbers!", 
-    } 
-    else if (checkFormRules(lastnameRef, "lastname__error", "lastname__icon", "lastname__input"));
+    else if (checkFormRules(fullnameRef, "fullname__error", "fullname__icon", "fullname__input"));
     
     if (emailRef === "") {
         showError("email__error", "Email cannot be empty");
@@ -142,13 +133,12 @@ function clearError() {
     borders.forEach((item) => item.classList.remove("display__border"));
 }
 
-// ----------------------- BUTTONS ------------------------------
+// ------- BUTTONS --------------------------------------------------
 
+        // ------------------ PAGE BUTTONS ---------------------------
 function flipCard(id) {
     let cardRef = document.querySelector(".card");
     let pageRef = document.querySelector("#"+id);
-    let faqRef = document.querySelector("#faq__button");
-    let signupRef = document.querySelector("#signup__button");
     let buttonRef = document.querySelectorAll(".page__button");
 
     buttonRef.forEach((item) => item.classList.remove("active__page"));
@@ -166,18 +156,28 @@ function flipCard(id) {
     }
 }
 
-
-const body = document.querySelector('body');
-const container = document.querySelector('.container');
-const content = document.querySelector('.content__container');
+        // ------------------ THEME BUTTONS --------------------------
 const toggle = document.querySelector('#toggle');
-const faq = document.querySelector('.faq__box')
-const signup = document.querySelector('.signup__box')
-toggle.onclick = function(){
+
+toggle.onclick = function() {
+    toggleTheme();
+}
+
+function toggleTheme() {
+    const body = document.querySelector('body');
+    const container = document.querySelector('.container');
+    const content = document.querySelector('.content__container');
+    const faq = document.querySelector('.faq__box');
+    const signup = document.querySelector('.signup__box');
+
     toggle.classList.toggle('active__theme');
     container.classList.toggle('active__theme');
     content.classList.toggle('active__theme');
     body.classList.toggle('active__theme');
     faq.classList.toggle('active__theme');
     signup.classList.toggle('active__theme');
-    }
+}
+//  --------------------------------------------------------------
+
+
+
