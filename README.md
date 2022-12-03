@@ -25,11 +25,6 @@ Users should be able to:
 
 ### Screenshot
 
-<p align="center">
-    <img width="768px" src="/images/desktop_challenge2.jpg"></img>
-    <img width="768px" src="/images/mobile_challenge2.jpg"></img>
-</p>
-
 ![](/images/desktop_challenge2.jpg)
 ![](/images/mobile_challenge2.jpg)
 
