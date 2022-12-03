@@ -29,9 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](C:\Users\felip\Desktop\challenges\challenge2\frontEndMentorChallenge2\challenge2_desktop.jpg)
-
-![Settings Window](https://raw.github.com/felipeMrtni/front/master/Screenshots/Settings.png)
+![](/images/desktop_challenge2.jpg)
+![](/images/mobile_challenge2.jpg)
 
 ### Links
 
